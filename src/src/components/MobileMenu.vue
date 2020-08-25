@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 .mobile-menu {
-  @apply fixed top-0 left-0 w-screen h-screen invisible;
+  @apply fixed top-0 left-0 w-screen h-screen transition-all duration-200 invisible z-10;
 }
 
 .mobile-menu--active {
