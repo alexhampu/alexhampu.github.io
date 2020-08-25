@@ -68,6 +68,7 @@ export default {
 .mobile-menu__container {
   @apply absolute top-0 left-0 w-full h-full bg-blue-900 z-10 shadow-lg transition duration-300 transform;
   --transform-translate-x: -32rem;
+  max-width: 350px;
 }
 
 .mobile-menu--active .mobile-menu__container {
