@@ -20,6 +20,11 @@ export default {
     MobileMenu,
     Footer,
     Header
+  },
+  watch:{
+    $route (){
+      this.$store.commit('mobile-menu-close');
+    }
   }
 }
 </script>

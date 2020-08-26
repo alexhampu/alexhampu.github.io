@@ -28,6 +28,7 @@ export default createStore({
 
     // Mobile
     'mobile-menu-toggle': ((state) => state.mobile.menu = !state.mobile.menu),
+    'mobile-menu-close': ((state) => state.mobile.menu = false),
   },
   actions: {
     'blog-get-posts': ({commit}) => {
