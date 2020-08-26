@@ -1,5 +1,8 @@
 <template>
   <div class="container mx-auto">
+    <div class="text-right">
+      <a :href="post.github" class="border rounded py-2 px-4 shadow hover:bg-gray-200"><i class="fab fa-github"></i> Read on Github</a>
+    </div>
     <div class="post__content" v-html="post.html"></div>
   </div>
 </template>
