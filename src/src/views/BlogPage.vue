@@ -1,8 +1,8 @@
 <template>
-<div class="container mx-auto">
+<div class="container mx-auto px-2">
   <div v-for="(list, year) in posts" :key="year">
     <h4 class="text-2xl mb-4">{{ year }}</h4>
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div v-for="post in list" :key="post.slug" class="border rounded-lg p-6">
         <div>
           <h1 class="text-3xl">{{ post.title }}</h1>
