@@ -8,6 +8,10 @@ body {
     @apply bg-blue-800;
 }
 
+.container {
+    @apply px-2;
+}
+
 header, main, footer {
     @apply transform transition duration-300;
 }

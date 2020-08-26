@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="container mx-auto px-2 relative z-20">
+    <div class="container mx-auto relative z-20">
       <div class="flex items-center justify-between py-4">
         <div class="header__logo"><logo></logo></div>
         <div>
