@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="container mx-auto px-2">
+    <div class="container mx-auto px-2 relative z-20">
       <div class="flex items-center justify-between py-4">
         <div class="header__logo"><logo></logo></div>
         <div>
@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     toggleMobileMenu: function () {
-      console.log(this.$refs.mobileMenu.toggleMenu());
+      this.$refs.mobileMenu.toggleMenu()
     }
   }
 }
@@ -48,7 +48,14 @@ export default {
 
 <style scoped>
 .header {
-  @apply bg-blue-800 relative;
+  @apply bg-blue-700 relative;
+}
+
+.header::after {
+  @apply absolute top-0 left-0 h-full w-full opacity-75 z-0;
+  content: '';
+  background: url('../assets/header_bg.png') no-repeat center;
+  background-size: cover;
 }
 
 .header__links {
@@ -60,19 +67,15 @@ export default {
 }
 
 .header__avatar {
-  @apply rounded-full mx-auto;
+  @apply rounded-full mx-auto select-none pointer-events-none;
   width: 80px;
 }
 
 .header__divider {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+  @apply absolute bottom-0 left-0 w-full pointer-events-none bg-white z-10;
   height: 5vh;
-  pointer-events: none;
   mask-image: url("data:image/svg+xml;utf8,%3csvg viewBox='0 0 100 100' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3e%3cpath d='M0,0 C16.6666667,66 33.3333333,98 50,98 C66.6666667,98 83.3333333,66 100,0 L100,100 L0,100 L0,0 Z' fill='%23fff'/%3e%3c/svg%3e");
   mask-size: 100% 101%;
-  background: white;
 }
 
 @screen md {
