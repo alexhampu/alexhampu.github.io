@@ -13,6 +13,7 @@ glob(`${postsDirectory}/**/*.md`, function (er, files) {
             return {
                 year,
                 slug,
+                github: `https://github.com/alexhampu/alexhampu.github.io/blob/master/posts/${year}/${slug}.md`,
                 ...getFileData(path)
             };
         } catch (error) {
