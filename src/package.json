@@ -5,8 +5,8 @@
   "scripts": {
     "build": "vue-cli-service build --dest ../docs",
     "lint": "vue-cli-service lint",
-    "start": "vue-cli-service serve --host 0.0.0.0 --port 9999",
-    "posts": "node process-posts.js"
+    "posts": "node process-posts.js",
+    "start": "vue-cli-service serve --host 0.0.0.0 --port 9999"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -14,12 +14,14 @@
     "marked": "^1.1.1",
     "tailwindcss": "^1.7.3",
     "vue": "^3.0.0-0",
-    "vue-router": "^4.0.0-beta.7"
+    "vue-router": "^4.0.0-beta.7",
+    "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "^4.5.4",
+    "@vue/cli-plugin-vuex": "^4.5.4",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0-0",
     "babel-eslint": "^10.1.0",
