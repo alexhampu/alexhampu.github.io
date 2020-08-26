@@ -21,7 +21,15 @@ export default {
     Footer,
     Header
   },
+  computed: {
+    title() {
+      return this.$store.state.page.title;
+    }
+  },
   watch:{
+    title() {
+      document.title = `${this.title} - Alex Hampu`;
+    },
     $route (){
       this.$store.commit('mobile-menu-close');
     }
