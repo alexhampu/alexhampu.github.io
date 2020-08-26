@@ -77,7 +77,7 @@
                 <i class="fas fa-briefcase fa-2x"></i>
               </div>
               <div>
-                <h6 class="text-sm text-gray-600">Sep 2014 – Dec 2014</h6>
+                <h6 class="text-sm text-gray-600">Aug 2016 – Present</h6>
                 <h5 class="font-bold text-lg text-gray-800 mb-2">GSD Group</h5>
                 <p class="text-gray-700">Full-stack development (HTML, CSS, JS, Angular.js, Angular, Vue.js, React, Ionic, PHP, Java, and more)</p>
               </div>
