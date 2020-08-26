@@ -9,7 +9,7 @@
             <router-link to="/blog" class="header__link">Blog</router-link>
           </div>
           <div class="header__mobile">
-            <mobile-menu-button @click="toggleMobileMenu()"></mobile-menu-button>
+            <mobile-menu-button></mobile-menu-button>
           </div>
         </div>
       </div>
@@ -21,12 +21,10 @@
       </div>
     </div>
     <div class="header__divider"></div>
-    <mobile-menu ref="mobileMenu"></mobile-menu>
   </header>
 </template>
 
 <script>
-import MobileMenu from "@/components/MobileMenu";
 import Logo from "@/components/Logo";
 import MobileMenuButton from "@/components/MobileMenuButton";
 
@@ -34,13 +32,9 @@ export default {
   name: 'Header',
   components: {
     MobileMenuButton,
-    MobileMenu,
     Logo
   },
   methods: {
-    toggleMobileMenu: function () {
-      this.$refs.mobileMenu.toggleMenu()
-    }
   },
   computed: {
     title() {

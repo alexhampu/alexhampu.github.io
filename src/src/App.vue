@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <Header></Header>
-    <main class="my-10">
+    <mobile-menu></mobile-menu>
+    <main class="my-10 relative z-0">
       <router-view></router-view>
     </main>
     <Footer></Footer>
@@ -11,10 +12,12 @@
 <script>
 import Header from '@/components/Header'
 import Footer from '@/components/Footer';
+import MobileMenu from "@/components/MobileMenu";
 
 export default {
   name: 'App',
   components: {
+    MobileMenu,
     Footer,
     Header
   }

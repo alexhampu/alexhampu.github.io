@@ -10,6 +10,9 @@ export default createStore({
     blog: {
       posts: [],
       post: {}
+    },
+    mobile: {
+      menu: false
     }
   },
   mutations: {
@@ -22,6 +25,9 @@ export default createStore({
     // Blog
     'blog-update-posts': ((state, payload) => state.blog.posts = payload),
     'blog-update-post': ((state, payload) => state.blog.post = payload),
+
+    // Mobile
+    'mobile-menu-toggle': ((state) => state.mobile.menu = !state.mobile.menu),
   },
   actions: {
     'blog-get-posts': ({commit}) => {

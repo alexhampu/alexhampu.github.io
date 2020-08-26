@@ -1,12 +1,17 @@
 <template>
-<div>
-  <button><i class="fas fa-bars"></i></button>
-</div>
+  <div>
+    <button @click="toggleMenu()"><i class="fas fa-bars"></i></button>
+  </div>
 </template>
 
 <script>
 export default {
-name: "MobileMenuButton"
+  name: "MobileMenuButton",
+  methods: {
+    toggleMenu: function () {
+      this.$store.commit('mobile-menu-toggle');
+    }
+  }
 }
 </script>
 

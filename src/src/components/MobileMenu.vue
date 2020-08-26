@@ -2,17 +2,20 @@
   <div class="mobile-menu" :class="classList">
     <div class="mobile-menu__backdrop" @click="toggleMenu()"></div>
     <div class="mobile-menu__container">
-      <div class="my-4 flex justify-between px-4">
+      <div class="mobile-menu__header">
         <div>
           <logo></logo>
         </div>
         <div>
-          <mobile-menu-button @click="toggleMenu()"></mobile-menu-button>
+          <mobile-menu-button></mobile-menu-button>
         </div>
       </div>
 
       <div>
-
+        <div class="mobile-menu__links">
+          <router-link to="/" class="mobile-menu__link">About</router-link>
+          <router-link to="/blog" class="mobile-menu__link">Blog</router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -30,19 +33,21 @@ export default {
   },
   data: function () {
     return {
-      mobileMenuActive: false
-    }
-  },
-  methods: {
-    toggleMenu: function () {
-      this.mobileMenuActive = !this.mobileMenuActive;
     }
   },
   computed: {
+    mobileMenuActive() {
+      return this.$store.state.mobile.menu;
+    },
     classList: function () {
       return {
         'mobile-menu--active': this.mobileMenuActive
       }
+    }
+  },
+  methods: {
+    toggleMenu: function () {
+      this.$store.commit('mobile-menu-toggle');
     }
   }
 }
@@ -50,8 +55,9 @@ export default {
 
 <style scoped>
 .mobile-menu {
-  @apply fixed top-0 left-0 w-screen h-screen invisible z-10;
+  @apply fixed top-0 left-0 w-screen h-screen invisible;
   transition: .2s visibility;
+  z-index: 9000;
 }
 
 .mobile-menu--active {
@@ -74,6 +80,18 @@ export default {
 
 .mobile-menu--active .mobile-menu__container {
   @apply translate-x-0;
+}
+
+.mobile-menu__header {
+  @apply my-4 flex justify-between px-4;
+}
+
+.mobile-menu__links {
+  @apply px-4;
+}
+
+.mobile-menu__link {
+  @apply block py-4 text-white;
 }
 
 @screen md {
