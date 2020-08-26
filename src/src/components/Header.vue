@@ -5,9 +5,8 @@
         <div class="header__logo"><logo></logo></div>
         <div>
           <div class="header__links">
-            <a href="#" class="header__link">About</a>
-            <a href="#" class="header__link">Projects</a>
-            <a href="#" class="header__link">Contact</a>
+            <router-link to="/" class="header__link">About</router-link>
+            <router-link to="/blog" class="header__link">Blog</router-link>
           </div>
           <div class="header__mobile">
             <mobile-menu-button @click="toggleMobileMenu()"></mobile-menu-button>
@@ -15,10 +14,10 @@
         </div>
       </div>
 
-      <div class="pt-20 pb-32 text-center text-white">
-        <img src="../assets/avatar.jpg" alt="" class="header__avatar"/>
-        <span class="block text-6xl font-light">Hello world!</span>
-        <span class="block text-4xl font-bold">I'm a software developer</span>
+      <div class="pt-20 pb-32 text-center text-white" v-if="title || subtitle">
+        <img src="../assets/avatar.jpg" alt="" class="header__avatar" v-if="avatar"/>
+        <span class="block text-6xl font-light" v-if="title">{{ title }}</span>
+        <span class="block text-4xl font-bold" v-if="subtitle">{{ subtitle }}</span>
       </div>
     </div>
     <div class="header__divider"></div>
@@ -41,6 +40,17 @@ export default {
   methods: {
     toggleMobileMenu: function () {
       this.$refs.mobileMenu.toggleMenu()
+    }
+  },
+  computed: {
+    title() {
+      return this.$store.state.page.title;
+    },
+    subtitle() {
+      return this.$store.state.page.subtitle;
+    },
+    avatar() {
+      return this.$store.state.page.avatar;
     }
   }
 }

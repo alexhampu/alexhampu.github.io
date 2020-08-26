@@ -1,6 +1,7 @@
 ---
 title: Hello world!
 date: 26-08-2020
+description: This guide is a very brief overview, with examples, of the syntax that
 ---
 
 Markdown Quick Reference

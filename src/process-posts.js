@@ -41,6 +41,7 @@ glob(`${postsDirectory}/**/*.md`, function (er, files) {
             slug: post.slug,
             date: post.date,
             title: post.title,
+            description: post.description,
             url: `/posts/${post.year}/${post.slug}.json`
         });
     });
@@ -82,7 +83,7 @@ glob(`${postsDirectory}/**/*.md`, function (er, files) {
 function getFileData(path) {
     const data = fs.readFileSync(path, 'utf8');
     const content = fm(data)
-    const requiredAttributes = ['title', 'date'];
+    const requiredAttributes = ['title', 'date', 'description'];
     const existingAttributes = Object.keys(content.attributes);
 
     if (!existingAttributes.length) {

@@ -11,7 +11,12 @@
 
 <script>
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  mounted() {
+    this.$store.commit('page-show-avatar');
+    this.$store.commit('page-update-title', 'Hello world!');
+    this.$store.commit('page-update-subtitle', `I'm a software developer`);
+  }
 }
 </script>
 
