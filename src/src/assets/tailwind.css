@@ -7,3 +7,25 @@
 body {
     @apply bg-blue-800;
 }
+
+header, main, footer {
+    @apply transform transition duration-300;
+}
+
+header {
+    @apply -translate-y-64 opacity-0;
+}
+
+main {
+    @apply translate-y-64 opacity-0;
+}
+
+footer {
+    @apply translate-y-64 opacity-100;
+}
+
+body.page--loaded header,
+body.page--loaded main,
+body.page--loaded footer {
+    @apply translate-y-0 opacity-100;
+}
