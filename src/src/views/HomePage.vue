@@ -6,6 +6,13 @@
       <div class="mx-4"><a href="https://linkedin.com/in/alexhampu95" class="hover:text-blue-700"><i
           class="fab fa-linkedin"></i> LinkedIn</a></div>
     </div>
+
+    <div class="mt-10 text-center">
+      <h5 class="text-xl mb-2">Github activity</h5>
+      <div class="text-center mx-auto select-none pointer-events-none" style="max-width: 900px;">
+        <img src="https://ghchart.rshah.org/alexhampu" alt="" class="w-full" />
+      </div>
+    </div>
   </div>
 </template>
 
